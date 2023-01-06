@@ -8,11 +8,20 @@ a {
     text-decoration: none;
 }
 
+body {
+    background: #f6f6f6;
+}
+
 .container {
     max-width: 950px;
     margin: 0 auto;
 }
 
-@import "blocks/promo";
-@import "blocks/header";
 @import "blocks/buttons";
+@import "blocks/titles";
+@import "blocks/forms";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/advantages";
+@import "blocks/consultation";
+@import "base/media";
