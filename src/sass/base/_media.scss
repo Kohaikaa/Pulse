@@ -41,6 +41,22 @@
             }
         }
     }
+
+    .carousel {
+
+        .prev,
+        .next {
+            display: none;
+        }
+
+        &__inner {
+            .tns-item {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 575px) {
