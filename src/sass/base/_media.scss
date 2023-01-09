@@ -1,6 +1,30 @@
+@media (max-width: 1051px) {
+    .carousel {
+
+        .prev,
+        .next {
+            left: auto;
+            right: 0;
+        }
+
+        .prev {
+            left: 0;
+            right: auto;
+        }
+    }
+}
+
 @media (max-width: 950px) {
     .container {
         padding: 0 15px;
+    }
+
+    .carousel {
+
+        .prev,
+        .next {
+            display: none;
+        }
     }
 }
 
@@ -43,11 +67,6 @@
     }
 
     .carousel {
-
-        .prev,
-        .next {
-            display: none;
-        }
 
         &__inner {
             .tns-item {
@@ -127,6 +146,16 @@
     .consultation {
         .title {
             font-size: 28px;
+        }
+    }
+
+    .catalog {
+        &__tab {
+            width: 180px;
+
+            div {
+                font-size: 15px;
+            }
         }
     }
 }
