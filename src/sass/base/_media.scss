@@ -172,6 +172,38 @@
             justify-content: center;
         }
     }
+
+    .feedback {
+        &__item {
+            display: block;
+            margin: 100px auto;
+        }
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__text {
+            display: block;
+            margin: 0 auto;
+            padding-right: 0;
+
+            &-name {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            &-marafons {
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            &-descr {
+                text-align: center;
+            }
+        }
+    }
 }
 
 @media (max-width: 540px) {
@@ -287,6 +319,16 @@
 
         .button_mini {
             width: 90px;
+        }
+    }
+
+    .feedback {
+        &__text {
+            &-marafons {}
+
+            &-descr {
+                font-size: 15px;
+            }
         }
     }
 }
