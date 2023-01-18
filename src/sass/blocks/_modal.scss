@@ -45,8 +45,15 @@
         text-align: center;
         color: #0D0D0D;
     }
+
+    &_mini {
+        min-height: 143px;
+
+    }
 }
 
+#consultation,
+#order,
 #thanks {
-    min-height: 143px;
+    display: none;
 }
