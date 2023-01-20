@@ -50,4 +50,13 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    // Validation
+    function validateForms(form) {
+        $(form).validate();
+    }
+
+    validateForms('#order form');
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
 });
