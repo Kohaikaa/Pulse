@@ -53,7 +53,30 @@ $(document).ready(function () {
 
     // Validation
     function validateForms(form) {
-        $(form).validate();
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, укажите свое настоящее имя.",
+                    minlength: jQuery.validator.format("Введите как минимум более {0} символа!")
+                },
+                phone: "Введите свой номер телефона",
+                email: {
+                    required: "Нам нужна ваша почта, чтобы оповещать вас.",
+                    email: "Адрес должен быть форматом name@domain.com"
+                }
+            }
+        });
     }
 
     validateForms('#order form');
