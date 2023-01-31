@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Pulse</title>
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a class="header__logo">
@@ -70,7 +71,8 @@
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/advantages/heart.png" alt="heart" class="advantages__item-icon">
+                    <img src="icons/advantages/heart.png" alt="heart"
+                        class="advantages__item-icon advantages__item-icon_animated">
                     <div class="advantages__item-header">Заботимся о здоровье</div>
                     <div class="advantages__item-descr">Мы работаем для того,
                         чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
@@ -103,7 +105,7 @@
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -116,10 +118,10 @@
                     <img src="img/slides/slide_3.jpg" alt="Slide 3">
                 </div>
             </div>
-            <button type="button" class="prev"><img src="icons/left.svg" /></button>
-            <button type="button" class="next"><img src="icons/right.svg" /></button>
+            <button type="button" class="prev"><img src="icons/left.svg" alt="prev arrow"></button>
+            <button type="button" class="next"><img src="icons/right.svg" alt="next arrow"></button>
         </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсомеров</h2>
@@ -476,11 +478,12 @@
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <div class="feedback">
         <div class="container">
             <div class="title">отзывы клиентов</div>
             <div class="feedback__wrapper">
-                <div class="feedback__item">
+                <div class="feedback__item animate__animated wow animate__fadeInUp" data-wow-duration="2s"
+                    data-wow-delay="0.5s">
                     <img src="img/feedbacks/feed_1.png" alt="Feed 1" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__text-name">Ирина Иванченко</div>
@@ -496,7 +499,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="feedback__item">
+                <div class="feedback__item animate__animated wow animate__fadeInUp" data-wow-duration="2s"
+                    data-wow-delay="0.5s">
                     <img src="img/feedbacks/feed_2.png" alt="Feed 1" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__text-name">Иван Сёмочкин</div>
@@ -512,7 +516,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="feedback__item">
+                <div class="feedback__item animate__animated wow animate__fadeInUp" data-wow-duration="2s"
+                    data-wow-delay="0.5s">
                     <img src="img/feedbacks/feed_3.png" alt="Feed 1" class="feedback__img">
                     <div class="feedback__text">
                         <div class="feedback__text-name">Юлия Дашкина</div>
@@ -532,13 +537,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <footer class="footer">
         <div class="footer__map">
-            <iframe
+            <iframe class="googlemap"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4304812014852!2d37.64480195186797!3d55.76839498046212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1673631194013!5m2!1sru!2sru"
-                width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer__info">
             <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
@@ -557,6 +561,7 @@
         </div>
     </footer>
 
+    <!-- Modal windows -->
     <div class="overlay">
         <div class="modal" id="consultation">
             <div class="modal__close">&#10006;</div>
@@ -588,10 +593,15 @@
             </div>
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/circle-up-solid.svg" alt="scroll up">
+    </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
